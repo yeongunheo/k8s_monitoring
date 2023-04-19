@@ -1,0 +1,7 @@
+repoURL: https://github.com/yeongunheo/k8s_monitoring
+
+apps:
+  - name: argocd
+    namespace: argocd
+  - name: nginx
+    namespace: default
