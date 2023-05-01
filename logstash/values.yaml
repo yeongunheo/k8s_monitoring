@@ -9,10 +9,10 @@ replicas: 1
 logstashConfig:
   logstash.yml: |
     http.host: "0.0.0.0"
-    xpack.monitoring.elasticsearch.hosts: [ "https://eck-elasticsearch-es-http:9200" ]
+    xpack.monitoring.elasticsearch.hosts: [ "198.19.196.108:9200" ]
     xpack.monitoring.elasticsearch.ssl.verification_mode: none
     xpack.monitoring.elasticsearch.username: "elastic"
-    xpack.monitoring.elasticsearch.password: "${elastic}"
+    xpack.monitoring.elasticsearch.password: "6M1X2EH7n86Njjfu93rv1hD2"
 #  log4j2.properties: |
 #    key = value
 
@@ -43,10 +43,10 @@ logstashPipeline:
     }
     output {
       elasticsearch {
-        hosts => [ "https://eck-elasticsearch-es-http:9200" ]
+        hosts => [ "198.19.196.108:9200" ]
         ssl_certificate_verification => false
         user => "elastic"
-        password => "${elastic}"
+        password => "6M1X2EH7n86Njjfu93rv1hD2"
         index => "stdout" 
       }
     }
